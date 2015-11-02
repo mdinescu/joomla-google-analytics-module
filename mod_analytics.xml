@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.3.0" client="site" method="upgrade">
+	<name>Google Analytics</name>
+	<author>Miky Dinescu</author>
+	<creationDate>Mar 2014</creationDate>
+	<version>3.3.0</version>
+	<description>A simple module that adds the Google Universal Analytics tracking to Joomla sites.</description>
+	<files>
+		<filename module="mod_analytics">mod_analytics.php</filename>
+		<folder>tmpl</folder>		
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>mod_analytics.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="trackcode"
+					type="text"
+					default="UA-0000000-1"
+					label="Profile Code"
+					description="The unique profile code assigned by Goolge Analytics to your website property." />
+				<field name="propertyname"
+					type="text"
+					default="yourwebsite.url"
+					label="Property Name"
+					description="The name assigned by Goolge Analytics to your website peroperty (usually the URL of your website)" />
+				<field name="mode"
+					type="radio"
+					default="0"
+					label="Analytics Mode"
+					description="Whether to use Classic Google Analytics or Universal Analytics" >
+					<option value="0">Classic Google Analytics</option>
+					<option value="1">New Universal Analytics</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
